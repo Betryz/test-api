@@ -31,7 +31,7 @@ describe('Testa /contas' , () => {
 
 
         response = await request(app).post('/contas').send({});
-         expect(response.statusCode).toBe(500);
+         expect(response.statusCode).toBe(400);
 
          conta.saldo = -1000000;
          response = await request(app).post('/contas').send(conta);
